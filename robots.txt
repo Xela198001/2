@@ -1,0 +1,14 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /blocks/
+Disallow: /css/
+Disallow: /js/
+Disallow: /images/
+Disallow: /fancybox/
+Disallow: /_thumbs/
+Disallow: /files/
+Disallow: /share42/
+Disallow: /blocks/footer.php
+Disallow: /blocks/header.php
+Disallow: /blocks/menu.php
+Disallow: /blocks/news.php

@@ -1,0 +1,7 @@
+# Do not remove this line or mod_rewrite rules and search engine friendly URLs will stop working
+RewriteBase /
+AuthType Basic   
+#AuthName "Приватная зона" 
+# AuthGroupFile /home/u768176764/public_html/admin/blocks/group 
+#AuthUserFile /home/u768176764/public_html/admin/blocks/.htpasswd   
+#require valid-user

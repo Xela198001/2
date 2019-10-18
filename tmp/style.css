@@ -1,0 +1,164 @@
+/* Сброс CSS*/
+html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed, 
+  figure, figcaption, footer, header, hgroup, 
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+  	margin: 0;
+  	padding: 0;
+  	border: 0;
+  	font-size: 100%;
+  	font: inherit;
+  	vertical-align: baseline;
+  }
+html,body {
+	margin:0;
+	padding:0;
+	/*background-image:url(../images/bg.jpg);*/
+    background-color: white;
+	background-repeat: repeat-x repeat-y;
+	width:1345px;
+	height:100%;
+	background-attachment: fixed;
+	font-size: 16px;
+	color:#0C024D;
+}
+h1 {text-align: center; font-size: 20pt; font: bold;}
+h2 {text-align: center; font-size: 18pt; font: bold;}
+h3 {text-align: center; font-size: 16pt;}
+p {font-size: 14pt; color: #45161C;}
+.contener { width: 95%; 
+height: 1024px;
+margin: 20px 40px 20px 40px; 
+padding: 5px 5px 5px 5px;
+background: white; margin: 10px auto; 
+box-shadow: 0px 2px 7px rgba(0,0,0,0.5);
+-moz-box-shadow: 0px 2px 7px rgba(0,0,0,0.5);
+-webkit-box-shadow: 0px 2px 7px rgba(0,0,0,0.5);
+border-radius: 10px;
+border: #0000A0 solid 1px 1px 1px 1px;
+border-radius: 10px;
+-webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+display:block;
+ -moz-opacity: 0.85; 
+ -khtml-opacity: 0.85; 
+ opacity: 0.85;
+ background-image:url(../images/images.jpg);
+	background-repeat: repeat-x repeat-y;
+ 
+}
+.rod {border: solid black 1px;}
+.rod td{border: solid black 1px;}
+.header { display:block; height: 182px; clear: right;}
+#left { width: 270px; float: left;}
+.footer {width: 100%; height: 70px; margin-bottom: 0px; background: green;display:block;}
+ #menu {width: 265px; margin-top: 10px; background-color: #FE9310; border: #FE9310 solid 1px; text-align: center; color: #fff; font-size: 14pt; font: bold;  zoom: 1;
+   position: relative;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   border-radius: 10px;
+   display: inline-block;
+   vertical-align: top; display: block; padding: 0px 0px 10px 0px;}
+ #menu div{ margin-top: 0px; padding: 5px 10px 5px 10px; border-top: #FF8040 dotted 1px; text-align: center; font-size: 11pt;}
+ul.cssmenu {
+   padding: 0px;
+   margin: 0px;
+   list-style: none;
+   width: 255px;
+} 
+#menu p{color: white; font-size: 28px; margin-top: 10px; margin-bottom: 2px;}
+/**
+ * ul.cssmenu li {
+ *    float: left;
+ * } 
+ */
+ul.cssmenu li a, ul.cssmenu li a:visited {
+   display: inline-block;
+   padding: 5px;
+   margin-top: 1px;
+   color: #FAFAD2;
+   background-color: #FE9310;
+   width: 255px;
+   border-top: white solid 1px;
+}
+ul.cssmenu li a:hover {
+   color: #4682B4;
+   background-color: #FAFAD2;
+}
+#news {background-color: #F4F4F4;width: 265px; margin-top: 10px; border: red solid 1px; text-align: center; color: #FE9310; font-size: 14pt; font: bold; border-radius: 10px; -webkit-border-radius: 10px; -moz-border-radius: 10px;}
+#news p{width: 255px; margin: 10px; text-align: left; color: black; font-size: 11pt;}
+#news a{text-align: left;}
+.news_header {height: 45px; vertical-align: middle; border-radius: 10px 10px 0px 0px; background-color: red; -webkit-border-radius: 10px; -moz-border-radius: 10px; padding: 15px 2px 0px 5px; color: #fff; font-size: 28px;}
+.content {width: 100%; color: #45161C;  float: top; }
+.news {font-size: 20px;}
+.news_all {border: solid #DBDBDB 1px; margin-bottom: 5px; }
+div.news_all {background-color: #587DFC;}
+.news_p {padding: 10px; text-align: center;}
+.news_text {background-color: #fff; padding: 15px;}
+#center {background-color: #F4F4F4;width: 76%; height: 800px; margin: 10px 5px; padding: 10px; float: left; border: #00D500 solid 1px; border-radius: 10px; 
+ background-image:url(../images/images.jpg);
+	background-repeat: repeat-x repeat-y;}
+.center_header {width:100%; height: 45px; margin-top: -10px; margin-left: -10px; border-radius: 10px 10px 0px 0px; background-color: #00D500; -webkit-border-radius: 10px; -moz-border-radius: 10px; padding: 0px 10px 0px 10px;}
+.scroll {width: 100%; height: 95%; overflow-y:auto; margin-top: 15px; margin-bottom: 10px; margin-right: -10px; position: relative; }
+.foto {text-align: center;}
+.newshr {background: red; color: red;  border:0px none;
+    height:1px; 
+    clear:both; 
+    }
+#gallery {border: silver solid 1px; margin: 2px; padding: 2px; float: left;}
+p.left { font: serif; font-size: 25px; margin: 5px 2px -13px 2px; color: white;}
+h1.header {color: #fff; border: #fff solid 0px; }
+/*Всплывающий скриншот*/
+.thumbnail{  
+position: relative;  
+z-index: 0;  
+text-decoration: none;
+/**
+ * -moz-opacity: 0.0; 
+ * -khtml-opacity: 0.0; 
+ * opacity: 0.5;
+ */
+}  
+.thumbnail:hover{  
+background-color: transparent;  
+z-index: 50;  
+}  
+.thumbnail span{ /*CSS for enlarged image*/  
+position: absolute;  
+background-color: white;  
+padding: 5px;  
+left: -1000px;  
+border: 1px solid white;  
+visibility: hidden;  
+color: red;  
+text-decoration: none;  
+border-radius: 4px 4px 4px 4px;
+-moz-border-radius: 4px 4px 4px 4px;
+-webkit-border-radius: 4px 4px 4px 4px;
+
+}  
+.thumbnail span img{ /*CSS for enlarged image*/  
+border-width: 0;  
+padding: 2px;  
+
+}  
+.thumbnail:hover span{ /*CSS for enlarged image on hover*/  
+visibility: visible;  
+top: -100px;  
+left: 60px; /*position where enlarged image should offset horizontally */  
+}  
+.footer {text-align: center; color: white;}
+.footer a {text-decoration: none; color: white;}
+.footer a:hover {text-decoration: none; color: white;}
+/**
+ * div {border: #000 solid 1px;}
+ */

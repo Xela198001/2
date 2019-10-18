@@ -1,0 +1,6 @@
+# Do not remove this line or mod_rewrite rules and search engine friendly URLs will stop working
+RewriteBase /
+RemoveHandler .php .htm .html
+AddHandler application/x-httpd-php .php .htm .html
+ErrorDocument 404 /err_404.php
+AddDefaultCharset cp1251

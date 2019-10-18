@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru">
+<head>
+<title>Построение пользовательских интерфейсов на основе библиотеки jQuery</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="Gennady A. Samkov" />
+<meta name="email" content="smkv@mail.ru" />
+<meta name="domain" content="linkexchanger.su" />
+<meta name="robots" content="noindex" />
+<script type="text/javascript" src="js/jquery-1.2.6.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox.js"></script>
+<script type="text/javascript" src="js/jquery.pngFix.pack.js"></script>
+<script type="text/javascript" src="js/jquery.metadata.js"></script>
+<link rel="stylesheet" type="text/css" href="fancy.css" />
+<style type="text/css">
+/* Расположение миниатюр на странице */
+ul {
+  list-style:none;
+}
+ul li {
+  display:inline;
+}
+a img {
+  border:none;
+}
+p {
+  margin-left:40px;
+  font-family: "Trebuchet MS", Tahoma, Verdana sans-serif;
+  font-size: 8pt;
+  width:440px;
+}
+</style>
+</head>
+<body>
+<ul id="gallery">
+  <li><a rel="fancy-tour" href="/example_jquery/fancybox_img/01.jpg" title="Россия - Греция 1 : 0"><img src="/example_jquery/fancybox_img/01m.jpg" alt="" /></a></li>
+  <li><a rel="fancy-tour" href="/example_jquery/fancybox_img/02.jpg" title="Великий Гус..."><img src="/example_jquery/fancybox_img/02m.jpg" alt="" /></a></li>
+  <li><a rel="fancy-tour" href="/example_jquery/fancybox_img/03.jpg" title="Это был наш день..."><img src="/example_jquery/fancybox_img/03m.jpg" alt="" /></a></li>
+  <li><a rel="fancy-tour" href="/example_jquery/fancybox_img/04.jpg" title="Россия - Голландия 3 : 1"><img src="/example_jquery/fancybox_img/04m.jpg" alt="" /></a></li>
+</ul>
+<ul>
+  <li><a id="custom" href="javascript:;"><img src="/example_jquery/fancybox_img/05m.jpg" alt="" /></a></li>
+  <li><a id="video" href="#tesvideo"><img src="/example_jquery/fancybox_img/06m.jpg" alt="" /></a></li>
+  <li><a id="video2" href="#tesvideo2"><img src="/example_jquery/fancybox_img/07m.jpg" alt="" /></a></li>
+  <li><a id="frame" href="http://www.google.ru/"><img src="/example_jquery/fancybox_img/08m.jpg" alt="" /></a></li>
+</ul>
+<p>Первый ряд картинок представляет традиционное использование фотогалереи. Клик по любой миниатюре открывает полноразмерное изображение. Появляется возможность перемещаться вперед и назад по набору картинок.</p>
+<p>За первой миниатюрой во втором ряду "прячется" целый набор картинок.</p>
+<p>Вторая и третья миниатюра во втором ряду демонстрируют возможность вставки контента, имеющегося на самой странице, но скрытого до поры - например ролика с YouTube.</p>
+<p>И наконец, четвертая миниатюра во втором ряду показывает как можно вывести в галерею любой контент через iframe.</p>
+<div style="display:none" id="tesvideo">
+<object width="425" height="344">
+<param name="movie" value="http://www.youtube.com/v/ead9YplpBPQ&hl=en&fs=1&color1=0x006699&color2=0x54abd6"></param>
+<param name="allowFullScreen" value="true"></param>
+<param name="wmode" value="transparent"></param>
+<embed src="http://www.youtube.com/v/ead9YplpBPQ&hl=en&fs=1&color1=0x006699&color2=0x54abd6" type="application/x-shockwave-flash" allowfullscreen="true" wmode="transparent" width="425" height="344"></embed>
+</object>
+</div>
+<div style="display:none" id="tesvideo2">
+<object width="425" height="344">
+<param name="movie" value="http://www.youtube.com/v/SBpCrYy_GWc&hl=en&fs=1&color1=0x006699&color2=0x54abd6"></param>
+<param name="allowFullScreen" value="true"></param>
+<param name="wmode" value="transparent"></param>
+<embed src="http://www.youtube.com/v/SBpCrYy_GWc&hl=en&fs=1&color1=0x006699&color2=0x54abd6" type="application/x-shockwave-flash" allowfullscreen="true" wmode="transparent" width="425" height="344"></embed>
+</object>
+</div>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+	
+    $("#gallery a").fancybox({
+    	hideOnContentClick: true,
+    	overlayShow: true,
+    	overlayOpacity: 0.5,
+    	zoomSpeedIn: 1500,
+    	zoomSpeedOut:600
+    });
+
+    $("#video, #video2").fancybox({
+    	zoomSpeedIn: 0,
+    	zoomSpeedOut:0,
+    	frameWidth: 425,
+    	frameHeight: 344
+    });
+    
+    
+    var imageList = [
+		{url: "/example_jquery/fancybox_img/05.jpg", title: "Первая картинка"},
+		{url: "/example_jquery/fancybox_img/05-1.jpg", title: "Вторая картинка"},
+		{url: "/example_jquery/fancybox_img/05-2.jpg", title: "Третья картинка"},
+		{url: "/example_jquery/fancybox_img/05-3.jpg", title: "Четвертая картинка"}
+	];
+		
+	function getGroupItems(opts) {
+		jQuery.each(imageList, function(i, val) {
+	        opts.itemArray.push(val);
+	    });
+	}
+    
+	$("#custom").fancybox({
+	    itemLoadCallback: getGroupItems
+	});
+
+    $("#frame").fancybox({
+    	zoomSpeedIn: 0,
+    	zoomSpeedOut:0,
+    	frameWidth: 800,
+    	frameHeight: 600
+    });
+   
+});
+</script>
+</body>
+</html>
